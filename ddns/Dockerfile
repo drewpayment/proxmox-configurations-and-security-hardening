@@ -4,7 +4,7 @@ FROM alpine:latest
 RUN apk update && \
 apk upgrade --available && sync
 
-RUN apk install jq -y
+RUN apk add --no-cache jq
 
 WORKDIR /app
 
