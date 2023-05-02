@@ -1,0 +1,13 @@
+version: "3.8"
+
+services: 
+  app:
+    image: alpine
+    container_name: ddns
+    restart: unless-stopped
+    environment:
+      - CLOUDFLARE_API_TOKEN=<your cloudflare api token>
+      - CLOUDFLARE_EMAIL=<your cloudflare email>
+      - CLOUDFLARE_DOMAIN=<your cloudflare domain>
+      - CLOUDFLARE_SUBDOMAIN=<your cloudflare subdomain>
+      
