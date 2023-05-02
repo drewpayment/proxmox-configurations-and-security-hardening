@@ -15,4 +15,4 @@ RUN chmod +x /app/cloudflare.sh
 RUN crontab -l | { cat; echo "*/5 * * * * /app/cloudflare.sh"; } | crontab -
 
 # Run the command on container startup
-CMD ["cron"]
+CMD ["crond", "-f", "-d", "8"]
