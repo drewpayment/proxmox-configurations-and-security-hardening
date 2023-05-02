@@ -2,8 +2,8 @@ version: "3.8"
 
 services: 
   app:
-    image: alpine
-    container_name: ddns
+    build: .
+    container_name: cloudflare_ddns
     restart: unless-stopped
     environment:
       - CLOUDFLARE_API_TOKEN=<your cloudflare api token>
