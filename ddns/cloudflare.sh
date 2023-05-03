@@ -10,6 +10,8 @@ zone_name="$CLOUDFLARE_DOMAIN"
 ## the dns record (sub-domain) that needs to be modified; e.g. sub.example.com
 dns_record="$CLOUDFLARE_SUBDOMAIN"
 
+echo $api_token $email $zone_name $dns_record
+
 # Check if the script is already running
 if ps ax | grep "$0" | grep -v "$$" | grep bash | grep -v grep > /dev/null; then
     echo -e "\033[0;31m [-] The script is already running."
